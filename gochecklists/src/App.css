@@ -74,3 +74,72 @@ ul {
     list-style-type: disc;
 }
 
+.styled-div {
+    padding: 5.7em 0 0.5em 0;
+    margin: 0.25em;
+    touch-action: manipulation;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-group {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0em 0.25em;
+}
+.card {
+    width: 9em;
+    margin: 0.25em;
+    border: 1px solid #DCE7DC;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 7em;
+    position: relative;
+    font-size: 0.8em;
+}
+@media (max-width: 500px) {
+    .card { font-size: 0.75em; }
+}
+@media (max-width: 370px) {
+    .card { font-size: 0.70em; }
+}
+.selected {
+    background-color: #F5F5F5;
+}
+.card span {
+    position: absolute;
+    top: 0.5em;
+    left: 0.5em;
+}
+.checkbox {
+    position: absolute;
+    top: 0.5em;
+    right: 0.25em;
+    width: 1.75em;
+}
+.card .gender {
+    top: auto;
+    bottom: 0.5em;
+}
+.checked {
+    display: none;
+}
+.selected .checked {
+    display: inline;
+}
+.sprite {
+    position: absolute;
+    top: 1.25em;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin: 0 auto;
+    width: 6em;
+}
+
+.card img {
+    max-width: 75px;
+}

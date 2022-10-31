@@ -2,6 +2,7 @@ import './App.css';
 import Dex from './components/Dex';
 import {useState, useEffect} from 'react';
 import {getPokemonData, getPokemons} from './services/pokemonService';
+import Header from './components/Header';
 
 export default function App() {
 
@@ -26,6 +27,13 @@ export default function App() {
 
 
   return (
+      <html>
+      <header>
+          <Header></Header>
+      </header>
+      <body>
       <Dex pokemons={pokemons}></Dex>
+      </body>
+      </html>
   );
 }

@@ -8,7 +8,7 @@ const Dex = (props) => {
             <div className="header">
                 <h1>Dex</h1>
             </div>
-            <div className="dex-grid">
+            <div className="styled-div">
                 {pokemons.map((pokemon, idx) => {
                     return <Pokemon pokemon={pokemon} key={pokemon.name} />;
                 })}
