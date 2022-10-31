@@ -5,6 +5,7 @@ import DexModes from '../services/DexModes';
 import Pokemon from './Pokemon';
 
 import Header from './Header';
+import Progressbar from "./Progressbar";
 
 const FixedContainer = styled.div`
   position: fixed;
@@ -86,6 +87,7 @@ const Dex = (props) => {
         <div>
             <FixedContainer>
                 <Header title={DexModes.getPageTitle(DexModes.DEX)} settingsClick={true}></Header>
+                <Progressbar value={0} max={pokemons.length}></Progressbar>
             </FixedContainer>
             <div className="styled-div">
                 {pokemons.map((pokemon, idx) => {
