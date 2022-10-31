@@ -1,11 +1,14 @@
 import React from 'react';
 import Header from './Header';
+import DexModes from "../services/DexModes";
 
-const Home = () => {
+const Home = (props) => {
+    const { pokemons } = props;
+
     return (
         <html>
             <header>
-                <Header/>
+                <Header title={"GO Checklists"}></Header>
             </header>
             <body>
                 <div>
