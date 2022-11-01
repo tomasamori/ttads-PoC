@@ -15,7 +15,7 @@ const FixedContainer = styled.div`
   z-index: 2;
 `;
 
-const MonList = styled.div`
+/* const MonList = styled.div`
   padding: 5.7em 0 0.5em 0;
   margin: 0.25em;
   touch-action: manipulation;
@@ -78,20 +78,31 @@ const MonList = styled.div`
     margin: 0 auto;
     width: 6em;
   }
-`;
+`;*/
 
 const Dex = (props) => {
+    const [owned, setOwned] = useState(0);
+
     const { pokemons } = props;
+
+    const handleValue = (r) => {
+        if (r) {
+            setOwned(owned + 1);
+        }
+        else {
+            setOwned(owned - 1);
+        }
+    }
 
     return (
         <div>
             <FixedContainer>
                 <Header title={DexModes.getPageTitle(DexModes.DEX)} settingsClick={true}></Header>
-                <Progressbar value={0} max={pokemons.length}></Progressbar>
+                <Progressbar value={owned} max={pokemons.length}></Progressbar>
             </FixedContainer>
             <div className="styled-div">
                 {pokemons.map((pokemon, idx) => {
-                    return <Pokemon pokemon={pokemon} key={pokemon.name} />;
+                    return <Pokemon pokemon={pokemon} key={pokemon.name} handleValue={handleValue}></Pokemon>;
                 })}
             </div>
         </div>

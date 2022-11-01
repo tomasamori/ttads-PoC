@@ -63,7 +63,7 @@ const Header = ({ title, settingsClick }) => {
             <span className="title">{title}</span>
 
             {settingsClick && (
-                <button className="settings btn-sm" onClick={settingsClick}></button>
+                <button className="settings btn-sm" onClick={() => settingsClick}></button>
             )}
         </HeaderContainer>
     );
