@@ -14,7 +14,3 @@ export const getPokemonData = async (url) => {
         return data;
     } catch (err) {}
 };
-
-export const getPageMode = async () => {
-    return window.location.pathname.replace("/", "");
-}

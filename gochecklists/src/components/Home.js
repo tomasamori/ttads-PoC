@@ -1,9 +1,7 @@
 import React from 'react';
 import Header from './Header';
-import DexModes from "../services/DexModes";
 
-const Home = (props) => {
-    const { pokemons } = props;
+const Home = () => {
 
     return (
         <div>
